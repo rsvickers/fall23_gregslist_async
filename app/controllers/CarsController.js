@@ -13,6 +13,9 @@ function _drawCars() {
   setHTML('carCards', content)
 }
 function _drawCarForm() {
+  if (!AppState.account) {
+    return
+  }
   setHTML('carForm', Car.CarFormTemplate)
 }
 
@@ -20,6 +23,7 @@ export class CarsController {
   constructor () {
     console.log('cars controller loaded');
     this.getCars()
+    _drawCarForm()
 
     AppState.on('cars', _drawCars)
     AppState.on('account', _drawCars)
