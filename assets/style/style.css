@@ -1,4 +1,11 @@
 /* BASIC STYLES HERE */
+label{
+  display: block;
+}
+
+input{
+  width: 100%;
+}
 .car-creator{
   height: 10vh;
   width: 10vh;
